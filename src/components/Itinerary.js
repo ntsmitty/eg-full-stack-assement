@@ -63,7 +63,7 @@ const Itinerary = props => {
       >
         {/* Leg 1 */}
         <Leg 
-          leg={props.legs.find(leg => leg._id === props.itinerary.legs[0])}
+          leg={props.legs.find(leg => leg._id === props.itinerary.legs[0])} // Need to handle the Itinerary property not being here - if you delete the Itinerary, and go back to the delete page page - it will throw an unhanlded exception, should route to home page or show message "nothing to delete"
           access={props.access}
         />
         <hr/>
