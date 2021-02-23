@@ -68,7 +68,7 @@ const Leg = (props) => {
       >
         {/* Airline Logo */}
         <img 
-          src={`https://logos.skyscnr.com/images/airlines/favicon/${props.leg.airlineId}.png`} 
+          src={`https://logos.skyscnr.com/images/airlines/favicon/${props.leg.airlineId}.png`} // Need to handle the Leg property not being here - if you delete the Leg, and go back to the delete page - it will throw an unhanlded exception, should route to home page or show message "nothing to delete".
           alt="Airline Logo"
           className={classes.logo}
         />

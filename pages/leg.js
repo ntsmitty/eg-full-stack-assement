@@ -104,7 +104,7 @@ const NewLeg = props => {
   
   const addLeg = async () => {
     try {
-      const res = await fetch(`${props.path}/api/legs`, {
+      const res = await fetch(`${props.path}/api/legs`, {  // unused variable 
         method: 'POST',
         headers: {
           'Accept': 'application/json',
@@ -121,7 +121,7 @@ const NewLeg = props => {
   const handleInputChange = event => {
     setFormState({ ...formState, [event.target.name]: event.target.value })
   }
-
+// I think this a simple and nice way to handle form validation, without adding a library that could make it more robust, but also more difficult to work with. 
   const validation = () => {
     let errors = {}
 

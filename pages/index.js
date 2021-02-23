@@ -58,6 +58,8 @@ const Home = props => {
   )
 }
 
+
+// getInitialProps should be getStaticPorps or getServerSideProps
 Home.getInitialProps = async ({ req }) => {
 
   const { origin } = absoluteUrl(req)
