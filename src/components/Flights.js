@@ -46,7 +46,7 @@ const Flights = props => {
   
   const classes = useStyles()
 
-  let agentChoices = Array.from(new Set(props.itineraries.map(itinerary => itinerary.agent)))
+  let agentChoices = Array.from(new Set(props.itineraries.map(itinerary => itinerary.agent))) // the use of a Set to ensure uniqe values
   
   const [flightsState, setFlightsState] = useState({
     selected: props.itineraries,
