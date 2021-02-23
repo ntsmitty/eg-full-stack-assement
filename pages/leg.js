@@ -104,7 +104,7 @@ const NewLeg = props => {
   
   const addLeg = async () => {
     try {
-      const res = await fetch(`${props.path}/api/legs`, {
+      const res = await fetch(`${props.path}/api/legs`, {  // unused variable 
         method: 'POST',
         headers: {
           'Accept': 'application/json',
