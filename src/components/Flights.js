@@ -52,7 +52,7 @@ const Flights = props => {
     selected: props.itineraries,
     agent: 'all',
     totalPrice: props.itineraries.map(itinerary => itinerary.price).reduce((sum, current) => sum + current, 0).toFixed(2),
-    avgPrice: (props.itineraries.map(itinerary => itinerary.price).reduce((sum, current) => sum + current, 0) / props.itineraries.length).toFixed(2)
+    avgPrice: (props.itineraries.map(itinerary => itinerary.price).reduce((sum, current) => sum + current, 0) / props.itineraries.length).toFixed(2) // if there is no itineraries, this will render as NaN - rather than '0.00' like average price 
   })
 
   const handleAgentChange = event => {
@@ -163,11 +163,11 @@ const Flights = props => {
           Total Price: <span className={classes.prices}>&pound;{flightsState.totalPrice}</span>
         </Typography>
         <Typography variant="button" color="secondary">
-          Average Price: <span className={classes.prices}>&pound;{flightsState.avgPrice}</span>
+          Average Price: <span className={classes.prices}>&pound;{flightsState.avgPrice}</span> 
         </Typography>
       </Grid>
     </Grid>
   )
 }
-
+// line:  166 - When there are no itineries, it shows NAN, rather thatn 0.00 like Total Price
 export default Flights
